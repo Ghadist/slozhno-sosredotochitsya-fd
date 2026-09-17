@@ -10,45 +10,45 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
-    --background-color: #FFEEF6;
+  --background-color: #ffeef6;
+  --background-image: url(../images/cover-image-light.png);
+  --accent-color: #ff8dcb;
+  --decor-color: #353430;
+  --decor-color-hover: rgba(50, 49, 45, 0.4);
+  --header-title-color: #ffc2e6;
+  --header-paragraph-color: #353430;
+  --main-title-color: #353430;
+  --main-article-title-color: #353430;
+  --main-article-paragraph-color: #353430;
+}
+
+:root.theme-light .header__rec {
+  display: none;
+}
+
+:root.theme-light .header__rec::after {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #ffeef6;
     --background-image: url(../images/cover-image-light.png);
-    --accent-color: #FF8DCB;
+    --accent-color: #ff8dcb;
     --decor-color: #353430;
     --decor-color-hover: rgba(50, 49, 45, 0.4);
-    --header-title-color: #FFC2E6;
+    --header-title-color: #ffc2e6;
     --header-paragraph-color: #353430;
     --main-title-color: #353430;
     --main-article-title-color: #353430;
     --main-article-paragraph-color: #353430;
-}
+  }
 
-:root.theme-light .header__rec {
+  .header__rec {
     display: none;
-}
+  }
 
-:root.theme-light .header__rec::after {
+  .header__rec::after {
     display: none;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --background-color: #FFEEF6;
-        --background-image: url(../images/cover-image-light.png);
-        --accent-color: #FF8DCB;
-        --decor-color: #353430;
-        --decor-color-hover: rgba(50, 49, 45, 0.4);
-        --header-title-color: #FFC2E6;
-        --header-paragraph-color: #353430;
-        --main-title-color: #353430;
-        --main-article-title-color: #353430;
-        --main-article-paragraph-color: #353430;
-    }
-
-    .header__rec {
-        display: none;
-    }
-
-    .header__rec::after {
-        display: none;
-    }
+  }
 }
