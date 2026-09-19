@@ -16,3 +16,9 @@
   --main-article-paragraph-color: #f1b2ce;
   --padding: 10px;
 }
+
+@media (width > 375px) {
+  :root {
+    --padding: 20px;
+  }
+}
