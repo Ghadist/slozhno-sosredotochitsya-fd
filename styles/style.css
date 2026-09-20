@@ -26,21 +26,9 @@
   min-height: 668px;
   height: 100vh;
   display: grid;
-  grid-template-rows:
-    1fr calc(1.655 * clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem))
-    1fr;
+  grid-template-rows: 1fr min-content 1fr;
   position: relative;
   padding: var(--padding);
-}
-
-/* 1.655 — разница между размерами шрифта для смартфона и планшета/ноутбука */
-
-@media (width >= 768px) {
-  .header {
-    grid-template-rows: 1fr calc(
-        (clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)) + 10px
-      ) 1fr;
-  }
 }
 
 .header__rec {
@@ -239,7 +227,7 @@
   .section__how-focus-better {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 10px;
+    column-gap: 15px;
   }
 
   .section__gallery {
