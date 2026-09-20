@@ -10,8 +10,10 @@
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 40px;
   margin: 0;
+  justify-self: center;
 }
 
 @media (width > 375px) {
@@ -35,7 +37,9 @@
 
 @media (width >= 768px) {
   .header {
-    grid-template-rows: 1fr clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) 1fr;
+    grid-template-rows: 1fr calc(
+        (clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)) + 10px
+      ) 1fr;
   }
 }
 
@@ -235,6 +239,7 @@
   .section__how-focus-better {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    column-gap: 10px;
   }
 
   .section__gallery {
@@ -249,14 +254,23 @@
 }
 
 @media (width >= 1024px) {
+  .section__focus-is-hard {
+    column-gap: 5px;
+  }
+
   .section__what-reduces-focus {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .title__what-reduces-focus {
     grid-column: 1 / -1;
     width: 315px;
+  }
+
+  .section__how-focus-better {
+    column-gap: 5px;
   }
 }
 
